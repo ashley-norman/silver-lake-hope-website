@@ -1,3 +1,3 @@
 <template>
-  <div>Calendar</div>
+  <div>bylaws</div>
 </template>
