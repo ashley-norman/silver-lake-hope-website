@@ -7,7 +7,9 @@
         aria-label="main menu"
       >
         <div class="w-full flex justify-between items-center md:hidden h-full">
-          <NuxtLink to="/" class="px-3 uppercase">Silver Lake</NuxtLink>
+          <NuxtLink to="/" class="px-3 uppercase !no-underline">
+            Silver Lake
+          </NuxtLink>
           <button
             class="hamburger hamburger--spin"
             :class="{ 'is-active': showMenu }"

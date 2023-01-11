@@ -33,30 +33,36 @@
     <Wave class="bg-cyan-900" />
     <Content class="pb-7">
       <dl>
-        <div class="grid grid-cols-4 gap-x-5 my-4">
-          <dt class="text-cyan-900 text-end text-xl">Site location</dt>
-          <dd class="col-start-2 col-span-3">
+        <div class="grid grid-cols-4 gap-y-4 md:gap-x-5 my-4">
+          <dt
+            class="text-cyan-900 md:text-end text-xl col-span-4 md:col-span-1"
+          >
+            Site location
+          </dt>
+          <dd class="col-start-1 col-span-4 md:col-start-2 md:col-span-3">
             11 Lakeview Ave, Blairstown NJ 07825
           </dd>
         </div>
         <div class="grid grid-cols-4 gap-x-5 my-4">
-          <dt class="text-cyan-900 text-end text-xl">Conforms (Yes/No)</dt>
-          <dd class="col-start-2 col-span-3">
+          <dt class="text-cyan-900 md:text-end text-xl">Conforms (Yes/No)</dt>
+          <dd class="col-start-1 col-span-4 md:col-start-2 md:col-span-3">
             Designates whether results conform to State Standards for public
             recreational bathing water quality.
           </dd>
         </div>
         <div class="grid grid-cols-4 gap-x-5 my-4">
-          <dt class="text-cyan-900 text-end text-xl row-span-4">pH</dt>
-          <dd class="col-start-2 col-span-3">pH results in standard units</dd>
-          <dd class="col-start-2 col-span-3">
+          <dt class="text-cyan-900 md:text-end text-xl row-span-4">pH</dt>
+          <dd class="col-start-1 col-span-4 md:col-start-2 md:col-span-3">
+            pH results in standard units
+          </dd>
+          <dd class="col-start-1 col-span-4 md:col-start-2 md:col-span-3">
             pH shall be 7.2 to 7.8, ideally 7.4 to 7.6
           </dd>
-          <dd class="col-start-2 col-span-3">
+          <dd class="col-start-1 col-span-4 md:col-start-2 md:col-span-3">
             When pH is reported as 6.8 the pH is 6.8 or below. When pH is
             reported as 8.2 the pH is 8.2 or above.
           </dd>
-          <dd class="col-start-2 col-span-3">
+          <dd class="col-start-1 col-span-4 md:col-start-2 md:col-span-3">
             <dl>
               <dt class="text-cyan-900">Method</dt>
               <dd>phenol red</dd>
@@ -64,21 +70,21 @@
           </dd>
         </div>
         <div class="grid grid-cols-4 gap-x-5 my-4">
-          <dt class="text-cyan-900 text-end text-xl row-span-4">
+          <dt class="text-cyan-900 md:text-end text-xl row-span-4">
             Chlorine/bromine
           </dt>
-          <dd class="col-start-2 col-span-3">
+          <dd class="col-start-1 col-span-4 md:col-start-2 md:col-span-3">
             Chlorine or bromine results in parts per million, ppm
           </dd>
-          <dd class="col-start-2 col-span-3">
+          <dd class="col-start-1 col-span-4 md:col-start-2 md:col-span-3">
             Free Chlorine shall be 1.0 to 10.0 in swimming pools & 2.0 to 10.0
             in whirlpools, hot tubs or spas
           </dd>
-          <dd class="col-start-2 col-span-3">
+          <dd class="col-start-1 col-span-4 md:col-start-2 md:col-span-3">
             Bromine shall be 2.0 to 10.0 in swimming pools & whirlpools, hot
             tubs or spas
           </dd>
-          <dd class="col-start-2 col-span-3">
+          <dd class="col-start-1 col-span-4 md:col-start-2 md:col-span-3">
             <dl>
               <dt class="text-cyan-900">Method</dt>
               <dd>DPD test kit</dd>
@@ -86,35 +92,37 @@
           </dd>
         </div>
         <div class="grid grid-cols-4 gap-x-5 my-4">
-          <dt class="text-cyan-900 text-end text-xl row-span-2">
+          <dt class="text-cyan-900 md:text-end text-xl row-span-2">
             Heterotrophic Plate Count
           </dt>
-          <dd class="col-start-2 col-span-3">results in organisms per ml</dd>
-          <dd class="col-start-2 col-span-3">
+          <dd class="col-start-1 col-span-4 md:col-start-2 md:col-span-3">
+            results in organisms per ml
+          </dd>
+          <dd class="col-start-1 col-span-4 md:col-start-2 md:col-span-3">
             HPC shall not exceed 200 organisms per ml
           </dd>
         </div>
         <div class="grid grid-cols-4 gap-x-5 my-4">
-          <dt class="text-cyan-900 text-end text-xl row-span-6">Coliform</dt>
-          <dd class="col-start-2 col-span-3">
+          <dt class="text-cyan-900 md:text-end text-xl row-span-6">Coliform</dt>
+          <dd class="col-start-1 col-span-4 md:col-start-2 md:col-span-3">
             Total coliform in swimming pools, <i>Pseudomonas aeruginosa</i> in
             whirlpools, hot tubs or spas, <i>E. coli </i> in beaches,
             enterococcus in marine waters
           </dd>
-          <dd class="col-start-2 col-span-3">
+          <dd class="col-start-1 col-span-4 md:col-start-2 md:col-span-3">
             Results in organisms per 100 ml
           </dd>
-          <dd class="col-start-2 col-span-3">
+          <dd class="col-start-1 col-span-4 md:col-start-2 md:col-span-3">
             Total coliform and <I>Pseudomonas aeruginosa </I> results shall be
             less than 1 organism per 100ml
           </dd>
-          <dd class="col-start-2 col-span-3">
+          <dd class="col-start-1 col-span-4 md:col-start-2 md:col-span-3">
             <i>E. coli</i> results shall not exceed 320 organisms per 100 ml
           </dd>
-          <dd class="col-start-2 col-span-3">
+          <dd class="col-start-1 col-span-4 md:col-start-2 md:col-span-3">
             Entercoccus results shall not exceed 104 organisms per 100 ml
           </dd>
-          <dd class="col-start-2 col-span-3">
+          <dd class="col-start-1 col-span-4 md:col-start-2 md:col-span-3">
             <dl>
               <dt>Methods</dt>
               <dd>HPC - SM 9215B</dd>
