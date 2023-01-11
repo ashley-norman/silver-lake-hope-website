@@ -15,5 +15,14 @@ export default defineNuxtConfig({
       },
     },
   },
-  css: ["@/assets/css/main.css"],
+  css: ["@/assets/css/main.css", "@/assets/css/hamburger.css"],
+  runtimeConfig: {
+    contentfulSpaceId: process.env.CONTENTFUL_SPACE_ID,
+    contentfulAccessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+    contentfulPreviewAccessToken: process.env.CONTENTFUL_PREVIEW_ACCESS_TOKEN,
+
+    public: {
+      contentfulPreviewSecret: process.env.CONTENTFUL_PREVIEW_SECRET,
+    },
+  },
 })
