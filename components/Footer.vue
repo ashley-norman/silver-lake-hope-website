@@ -46,6 +46,16 @@
       </div>
     </div>
   </footer>
+  <div class="text-xs mx-auto">
+    © Silver Lake Property Owner's Association, 2022 | Website design and
+    development by
+    <a
+      href="mailto:ashley.ansell@gmail.com"
+      class="text-cyan-900 font-semibold"
+    >
+      Ashley
+    </a>
+  </div>
 </template>
 
 <style scoped lang="scss"></style>
