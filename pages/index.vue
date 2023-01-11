@@ -60,7 +60,7 @@
       <!-- <Wave class="bg-cyan-900" top alternate /> -->
       <hr class="border-cyan-900/25 w-[98vw] mx-auto" />
 
-      <section id="announcements">
+      <!-- <section id="announcements">
         <Content>
           <h1>Announcements</h1>
           <div v-for="(announcement, i) in announcements" :key="i">
@@ -81,7 +81,7 @@
         <Content>
           <h1>Contact Us</h1>
         </Content>
-      </section>
+      </section> -->
     </main>
   </div>
 </template>

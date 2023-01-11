@@ -9,6 +9,12 @@
         >
           Reservations
         </h1>
+        <a
+          class="absolute bottom-0 right-0 text-white/5 text-xs"
+          href="https://unsplash.com/@erothermel?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+        >
+          Source
+        </a>
       </div>
     </div>
     <Content class="bg-cyan-900 text-white pt-7">
@@ -27,7 +33,7 @@ import Wave from "~~/components/Wave.vue"
 .page-header {
   height: 200px;
   max-height: 100vh;
-  background-image: url(~~/assets/images/silver-lake-2.jpg);
+  background-image: url(~~/assets/images/calendar.jpg);
   background-size: cover;
   background-position: 50% 60%;
   filter: grayscale(100%) contrast(200%);

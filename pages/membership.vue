@@ -1,5 +1,5 @@
 <template>
-  <article>
+  <article class="mb-10">
     <div class="page-header">
       <div
         class="logo bg-cyan-900/50 h-full w-full flex flex-col justify-center items-center"
@@ -27,24 +27,31 @@
       <h3 class="text-xl mb-5">
         To Abide by SLPOA official documents and payment
       </h3>
-      <p>
-        Our family members who belong to this membership have read and
-        understand the Bylaws and the Policies and Procedures of the SLPOA. We
-        agree to abide by these official documents and understand that failure
-        to do so could result in suspension and/or revocation of our membership.
-        This is to be acknowledged by all family members who are a part of your
-        families’ membership. By submitting your payment via the payment portal,
-        you are acknowledging this.
-      </p>
+      <div class="flex flex-col gap-5">
+        <p>
+          Our family members who belong to this membership have read and
+          understand the Bylaws and the Policies and Procedures of the SLPOA. We
+          agree to abide by these official documents and understand that failure
+          to do so could result in suspension and/or revocation of our
+          membership. This is to be acknowledged by all family members who are a
+          part of your families’ membership. By submitting your payment via the
+          payment portal, you are acknowledging this.
+        </p>
 
-      <p>
-        Our Association welcomes involvement and participation of members.
-        Without member involvement we cannot succeed. If you wish to offer any
-        assistance at all, please send an email to
-        <a href="mailto:SLPOA@yahoo.com">SLPOA@yahoo.com</a> and list some ways
-        that you might offer to help our Association. Suggestions are also
-        welcome.
-      </p>
+        <p>
+          Our Association welcomes involvement and participation of members.
+          Without member involvement we cannot succeed. If you wish to offer any
+          assistance at all, please send an email to
+          <a
+            href="mailto:SLPOA@yahoo.com"
+            class="underline text-cyan-900 hover:no-underline"
+          >
+            SLPOA@yahoo.com
+          </a>
+          and list some ways that you might offer to help our Association.
+          Suggestions are also welcome.
+        </p>
+      </div>
     </Content>
   </article>
 </template>

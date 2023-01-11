@@ -52,13 +52,15 @@
     <div class="grow">
       <slot />
     </div>
-    <footer class="bg-cyan-900 text-white">footer</footer>
+    <Footer />
   </div>
 </template>
 
 <script setup>
 import { ref, watch } from "vue"
 import { useRoute } from "vue-router"
+
+import Footer from "~~/components/Footer.vue"
 
 const route = useRoute()
 
@@ -82,6 +84,9 @@ header {
 }
 .main-menu a {
   display: block;
+}
+a.router-link-exact-active {
+  text-decoration: underline;
 }
 .hamburger {
   &-inner,
