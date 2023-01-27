@@ -18,10 +18,10 @@
           <dt class="uppercase mt-3">Address</dt>
           <a
             class="hover:underline"
-            href="https://goo.gl/maps/kE5YUYrTaqWkkHxU9"
+            href="https://goo.gl/maps/NvPALEo6hE6BnGUe6"
             target="_blank"
           >
-            <dd>11 Lakeview Ave</dd>
+            <dd>11 Lake View Ave</dd>
             <dd>Blairstown, NJ</dd>
           </a>
         </dl>
