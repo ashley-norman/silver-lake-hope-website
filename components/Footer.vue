@@ -73,4 +73,6 @@
   </div>
 </template>
 
-<style scoped lang="scss"></style>
+<script setup>
+import Content from "~~/components/Content.vue"
+</script>

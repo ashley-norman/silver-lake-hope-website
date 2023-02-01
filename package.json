@@ -20,6 +20,7 @@
     "tailwindcss": "^3.1.8"
   },
   "dependencies": {
-    "contentful": "^9.2.5"
+    "contentful": "^9.2.5",
+    "date-fns": "^2.29.3"
   }
 }
