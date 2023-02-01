@@ -58,7 +58,7 @@
       </section>
 
       <!-- <Wave class="bg-cyan-900" top alternate /> -->
-      <hr class="border-cyan-900/25 w-[98vw] mx-auto" />
+      <!-- <hr class="border-cyan-900/25 w-[98vw] mx-auto" /> -->
 
       <!-- <section id="announcements">
         <Content>
@@ -76,12 +76,8 @@
           <p>We sell them.</p>
         </Content>
       </section>
-      <Wave class="bg-cyan-900" />
-      <section id="contact">
-        <Content>
-          <h1>Contact Us</h1>
-        </Content>
-      </section> -->
+      -->
+      <!-- <Wave class="bg-cyan-900" /> -->
     </main>
   </div>
 </template>
