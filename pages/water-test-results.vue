@@ -42,7 +42,7 @@
           </dt>
 
           <dd class="col-start-3 row-start-2 text-center">
-            {{ waterTestResult.results }}
+            {{ waterTestResult?.results }}
           </dd>
           <div class="w-px bg-white row-span-full col-start-4" />
           <dt
@@ -55,7 +55,7 @@
           </dd>
         </dl>
 
-        <p v-if="waterTestResult.conforms">
+        <p v-if="waterTestResult?.conforms">
           This sample conforms to State Public Recreational Bathing Standards
           for the below analyses.
         </p>
@@ -189,11 +189,13 @@ const { data: waterTestResult } = await useAsyncData(() => {
 })
 
 const date = computed(() =>
-  waterTestResult.value.resultsDate
+  waterTestResult.value?.resultsDate
     ? format(new Date(waterTestResult.value.resultsDate), "MM/dd/yyyy")
     : "Cannot Retrieve Date"
 )
-const conforms = computed(() => (waterTestResult.value.conforms ? "yes" : "no"))
+const conforms = computed(() =>
+  waterTestResult.value?.conforms ? "yes" : "no"
+)
 </script>
 
 <style scoped laang="scss">

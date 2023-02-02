@@ -15,7 +15,11 @@ export default defineNuxtConfig({
       },
     },
   },
-  css: ["@/assets/css/main.css", "@/assets/css/hamburger.css"],
+  css: [
+    "@/assets/css/main.css",
+    "@/assets/css/hamburger.css",
+    "@fortawesome/fontawesome-svg-core/styles.css",
+  ],
   runtimeConfig: {
     contentfulSpaceId: process.env.CONTENTFUL_SPACE_ID,
     contentfulAccessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
