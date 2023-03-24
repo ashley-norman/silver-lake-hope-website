@@ -44,9 +44,14 @@ import Wave from "~~/components/Wave.vue"
 import DocumentDisplay from "~~/components/DocumentDisplay.vue"
 import { getBylawsDocuments } from "~~/lib/api"
 
-const { data: documents } = await useAsyncData(() => {
-  return getBylawsDocuments()
-})
+const preview = usePreview()
+
+const { data: documents } = await useAsyncData(
+  () => {
+    return getBylawsDocuments(preview.value)
+  },
+  { watch: [preview] }
+)
 </script>
 
 <style scoped>

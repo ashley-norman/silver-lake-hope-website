@@ -104,9 +104,14 @@ import Wave from "~~/components/Wave.vue"
 import Announcement from "~~/components/Announcement.vue"
 import { getNewestAnnouncement } from "~~/lib/api"
 
-const { data: announcement } = await useAsyncData(() => {
-  return getNewestAnnouncement()
-})
+const preview = usePreview()
+
+const { data: announcement } = await useAsyncData(
+  () => {
+    return getNewestAnnouncement(preview.value)
+  },
+  { watch: [preview] }
+)
 </script>
 
 <style scoped>

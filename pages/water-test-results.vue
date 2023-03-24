@@ -184,9 +184,14 @@ import Content from "~~/components/Content.vue"
 import Wave from "~~/components/Wave.vue"
 import { getLatestWaterTestResult } from "~~/lib/api"
 
-const { data: waterTestResult } = await useAsyncData(() => {
-  return getLatestWaterTestResult()
-})
+const preview = usePreview()
+
+const { data: waterTestResult } = await useAsyncData(
+  () => {
+    return getLatestWaterTestResult(preview.value)
+  },
+  { watch: [preview] }
+)
 
 const date = computed(() =>
   waterTestResult.value?.resultsDate

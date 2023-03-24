@@ -44,14 +44,19 @@ import Announcement from "~~/components/Announcement.vue"
 import SimplePagination from "~~/components/SimplePagination.vue"
 import { getAllAnnounements } from "~~/lib/api"
 
+const preview = usePreview()
+
 const skip = ref(0)
 const limit = ref(10)
 
 const { data } = await useAsyncData(
   () => {
-    return getAllAnnounements({ skip: skip.value, limit: limit.value })
+    return getAllAnnounements(
+      { skip: skip.value, limit: limit.value },
+      preview.value
+    )
   },
-  { watch: [skip, limit] }
+  { watch: [skip, limit, preview] }
 )
 
 const announcements = computed(() => data.value?.items)
