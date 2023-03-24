@@ -14,25 +14,12 @@
     </div>
 
     <template v-if="showDocument">
-      <div class="flex mb-1 justify-between items-end">
-        <span class="text-sm">Page {{ page }} of {{ pageCount }}</span>
-        <div class="flex gap-1">
-          <button
-            :disabled="page === 1"
-            :class="[buttonClasses, circleButtonClasses]"
-            @click="pageBack"
-          >
-            <fa-icon icon="fa-solid fa-arrow-left" />
-          </button>
-          <button
-            :disabled="page === pageCount"
-            :class="[buttonClasses, circleButtonClasses]"
-            @click="pageForward"
-          >
-            <fa-icon icon="fa-solid fa-arrow-right" />
-          </button>
-        </div>
-      </div>
+      <SimplePagination
+        :page="page"
+        :page-count="pageCount"
+        @pageBack="pageBack"
+        @pageForward="pageForward"
+      />
 
       <div class="border border-gray-300">
         <vue-pdf-embed ref="pdfRef" :source="source" :page="page" />
@@ -42,7 +29,7 @@
 </template>
 
 <script setup>
-import { ref, computed } from "vue"
+import SimplePagination from "./SimplePagination.vue"
 
 const props = defineProps({
   title: String,
