@@ -18,15 +18,27 @@
       </div>
     </div>
     <Content class="bg-cyan-900 text-white pt-7">
-      <p>Calendar coming soon!</p>
+      <h1 class="mb-4 text-4xl">Calendar</h1>
+      <p>
+        Below, view a read-only calendar with currently scheduled events. If you
+        would like to schedule an event, or modify an existing event, please
+        send an email to
+        <a href="mailto:SLPOA@yahoo.com" class="underline hover:no-underline">
+          SLPOA@yahoo.com
+        </a>
+      </p>
     </Content>
     <Wave class="bg-cyan-900" />
+    <Content>
+      <Calendar />
+    </Content>
   </article>
 </template>
 
 <script setup>
 import Content from "~~/components/Content.vue"
 import Wave from "~~/components/Wave.vue"
+import Calendar from "~~/components/Calendar.vue"
 </script>
 
 <style scoped>

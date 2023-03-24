@@ -30,6 +30,8 @@
     "contentful": "^9.3.3",
     "contentful-rich-text-vue-renderer": "^3.0.1",
     "date-fns": "^2.29.3",
-    "vue-pdf-embed": "^1.1.5"
+    "date-fns-tz": "^2.0.0",
+    "vue-pdf-embed": "^1.1.5",
+    "vue-simple-calendar": "^6.3.1"
   }
 }
