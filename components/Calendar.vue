@@ -52,7 +52,7 @@ const calendarEvents = computed(() => {
       item,
     }))
   }
-  return "BUTTS"
+  return []
 })
 
 const showDate = ref(new Date())
