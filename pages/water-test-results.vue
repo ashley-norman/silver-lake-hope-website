@@ -24,45 +24,49 @@
           weekly to ensure its suitability for swimming and it regularly tests
           “squeaky clean”.
         </p>
-
-        <dl
-          class="inline-grid auto-cols-auto grid-rows-2 gap-x-3 gap-y-2 justify-center"
-        >
-          <dt
-            class="col-start-1 row-start-1 text-2xl font-semibold tracking-wider text-right"
+        <template v-if="waterTestResults != null">
+          <dl
+            class="inline-grid auto-cols-auto grid-rows-2 gap-x-3 gap-y-2 justify-center"
           >
-            Date
-          </dt>
-          <dd class="col-start-1 row-start-2 text-right">{{ date }}</dd>
-          <div class="w-px bg-white row-span-full col-start-2" />
-          <dt
-            class="col-start-3 row-start-1 text-2xl font-semibold tracking-wider text-center"
-          >
-            Results
-          </dt>
+            <dt
+              class="col-start-1 row-start-1 text-2xl font-semibold tracking-wider text-right"
+            >
+              Date
+            </dt>
+            <dd class="col-start-1 row-start-2 text-right">{{ date }}</dd>
+            <div class="w-px bg-white row-span-full col-start-2" />
+            <dt
+              class="col-start-3 row-start-1 text-2xl font-semibold tracking-wider text-center"
+            >
+              Results
+            </dt>
 
-          <dd class="col-start-3 row-start-2 text-center">
-            {{ waterTestResult?.results }}
-          </dd>
-          <div class="w-px bg-white row-span-full col-start-4" />
-          <dt
-            class="col-start-5 row-start-1 text-2xl font-semibold tracking-wider text-left"
-          >
-            Conforms?
-          </dt>
-          <dd class="col-start-5 row-start-2 uppercase text-left">
-            {{ conforms }}
-          </dd>
-        </dl>
+            <dd class="col-start-3 row-start-2 text-center">
+              {{ waterTestResult?.results }}
+            </dd>
+            <div class="w-px bg-white row-span-full col-start-4" />
+            <dt
+              class="col-start-5 row-start-1 text-2xl font-semibold tracking-wider text-left"
+            >
+              Conforms?
+            </dt>
+            <dd class="col-start-5 row-start-2 uppercase text-left">
+              {{ conforms }}
+            </dd>
+          </dl>
 
-        <p v-if="waterTestResult?.conforms">
-          This sample conforms to State Public Recreational Bathing Standards
-          for the below analyses.
-        </p>
-        <p v-else>
-          This sample does not conform to State Public Recreational Bathing
-          Standards for the below analyses.
-        </p>
+          <p v-if="waterTestResult?.conforms">
+            This sample conforms to State Public Recreational Bathing Standards
+            for the below analyses.
+          </p>
+          <p v-else>
+            This sample does not conform to State Public Recreational Bathing
+            Standards for the below analyses.
+          </p>
+        </template>
+        <template v-else>
+          <p>No water test results posted, check back later!</p>
+        </template>
       </div>
     </Content>
     <Wave class="bg-cyan-900" />

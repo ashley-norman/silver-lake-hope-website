@@ -63,7 +63,6 @@ const setShowDate = (d) => {
   showDate.value = d
 }
 const onClickItem = (e) => {
-  console.log("item clicked", e)
   showModal.value = true
   modalDetails.value = e.originalItem.item
 }

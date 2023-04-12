@@ -57,10 +57,9 @@
         </Content>
       </section>
 
-      <!-- <Wave class="bg-cyan-900" top alternate /> -->
       <hr class="border-cyan-900/25 w-[98vw] mx-auto" />
 
-      <section id="announcements" class="py-4">
+      <section v-if="announcement != null" id="announcements" class="py-4">
         <Content>
           <h2 class="">Latest Announcement</h2>
           <Announcement
