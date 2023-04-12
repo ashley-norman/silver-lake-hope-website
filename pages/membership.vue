@@ -38,7 +38,7 @@
           payment portal, you are acknowledging this.
         </p>
 
-        <p>
+        <p style="padding-bottom: 2.25rem">
           Our Association welcomes involvement and participation of members.
           Without member involvement we cannot succeed. If you wish to offer any
           assistance at all, please send an email to
@@ -51,6 +51,24 @@
           and list some ways that you might offer to help our Association.
           Suggestions are also welcome.
         </p>
+      </div>
+    </Content>
+
+    <hr
+      class="border-cyan-900/25 w-[98vw] mx-auto"
+      style="padding-bottom: 2.25rem"
+    />
+
+    <Content>
+      <h2 class="mb-0">Membership Payment</h2>
+      <h3 class="text-xl mb-5">
+        Use the below QR code to access the membership payment site.
+      </h3>
+      <div class="flex align-middle justify-center">
+        <img
+          src="~~/assets/images/qrcode.png"
+          alt="QR Code to the payment website"
+        />
       </div>
     </Content>
   </article>

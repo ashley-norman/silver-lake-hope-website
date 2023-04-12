@@ -57,31 +57,41 @@
         </Content>
       </section>
 
-      <!-- <Wave class="bg-cyan-900" top alternate /> -->
       <hr class="border-cyan-900/25 w-[98vw] mx-auto" />
 
-      <!-- <section id="announcements">
+      <section v-if="announcement != null" id="announcements" class="py-4">
         <Content>
-          <h1>Announcements</h1>
-          <div v-for="(announcement, i) in announcements" :key="i">
-            <h2>{{ announcement.title }}</h2>
-            <p>{{ announcement.publishDate }}</p>
-          </div>
+          <h2 class="">Latest Announcement</h2>
+          <Announcement
+            :title="announcement.title"
+            :publish-date="announcement.publishDate"
+            :content="announcement.content"
+          />
+          <NuxtLink
+            to="/announcements"
+            class="flex justify-center items-center my-3 gap-1"
+          >
+            <div>View All Announcements</div>
+            <button
+              class="px-3 py-2 font-semibold text-sm bg-cyan-700 enabled:hover:bg-cyan-900 text-white rounded-full shadow-sm"
+              @click="pageBack"
+            >
+              <!-- <NuxtLink to="/announcements"> -->
+              <fa-icon icon="fa-solid fa-arrow-right" />
+              <!-- </NuxtLink> -->
+            </button>
+          </NuxtLink>
         </Content>
       </section>
 
-      <section id="tshirts" class="bg-cyan-900 text-white">
+      <!-- <section id="tshirts" class="bg-cyan-900 text-white">
         <Content>
           <h1 class="pt-7">T-Shirts</h1>
           <p>We sell them.</p>
         </Content>
-      </section>
-      <Wave class="bg-cyan-900" />
-      <section id="contact">
-        <Content>
-          <h1>Contact Us</h1>
-        </Content>
       </section> -->
+
+      <!-- <Wave class="bg-cyan-900" /> -->
     </main>
   </div>
 </template>
@@ -90,11 +100,17 @@
 import Hero from "~~/components/Hero.vue"
 import Content from "~~/components/Content.vue"
 import Wave from "~~/components/Wave.vue"
-import { getAllAnnounements } from "~~/lib/api"
+import Announcement from "~~/components/Announcement.vue"
+import { getNewestAnnouncement } from "~~/lib/api"
 
-const { data: announcements } = await useAsyncData(() => {
-  return getAllAnnounements()
-})
+const preview = usePreview()
+
+const { data: announcement } = await useAsyncData(
+  () => {
+    return getNewestAnnouncement(preview.value)
+  },
+  { watch: [preview] }
+)
 </script>
 
 <style scoped>

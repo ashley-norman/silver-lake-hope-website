@@ -18,15 +18,40 @@
       </div>
     </div>
     <Content class="bg-cyan-900 text-white pt-7">
-      <p>Documents coming soon!</p>
+      <h1 class="mb-0">Documents</h1>
     </Content>
     <Wave class="bg-cyan-900" />
+    <Content>
+      <div v-for="(document, index) in documents" :key="index" class="mb-2">
+        <DocumentDisplay
+          :title="document.title"
+          :description="document.description"
+          :source="document.documentation.url"
+          :file-name="document.documentation.title"
+        />
+        <hr
+          v-if="index < documents.length - 1"
+          class="border-cyan-900/25 my-3"
+        />
+      </div>
+    </Content>
   </article>
 </template>
 
 <script setup>
 import Content from "~~/components/Content.vue"
 import Wave from "~~/components/Wave.vue"
+import DocumentDisplay from "~~/components/DocumentDisplay.vue"
+import { getBylawsDocuments } from "~~/lib/api"
+
+const preview = usePreview()
+
+const { data: documents } = await useAsyncData(
+  () => {
+    return getBylawsDocuments(preview.value)
+  },
+  { watch: [preview] }
+)
 </script>
 
 <style scoped>

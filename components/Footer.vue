@@ -1,4 +1,19 @@
 <template>
+  <hr class="border-cyan-900/25 w-[98vw] mx-auto" />
+  <section id="contact">
+    <Content class="py-4 text-center">
+      <h2 class="text-2xl mb-3">Contact Us</h2>
+      <p>
+        Have a question, comment, suggestion, or just want to say hi?
+        <a
+          href="mailto:SLPOA@yahoo.com"
+          class="underline hover:no-underline text-cyan-900"
+        >
+          Send us an email!
+        </a>
+      </p>
+    </Content>
+  </section>
   <hr />
   <footer class="p-9 bg-cyan-900 text-white">
     <div
@@ -58,4 +73,6 @@
   </div>
 </template>
 
-<style scoped lang="scss"></style>
+<script setup>
+import Content from "~~/components/Content.vue"
+</script>

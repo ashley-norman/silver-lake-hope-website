@@ -18,20 +18,60 @@
       </div>
     </div>
     <Content class="bg-cyan-900 text-white pt-7">
-      <div class="flex flex-col gap-5">
+      <div class="flex flex-col gap-5 text-center">
         <p>
           SLPOA has the lake treated for weed control and the water tested
           weekly to ensure its suitability for swimming and it regularly tests
           “squeaky clean”.
         </p>
-        <p>
-          This sample conforms to State Public Recreational Bathing Standards
-          for the below analyses.
-        </p>
+        <template v-if="waterTestResults != null">
+          <dl
+            class="inline-grid auto-cols-auto grid-rows-2 gap-x-3 gap-y-2 justify-center"
+          >
+            <dt
+              class="col-start-1 row-start-1 text-2xl font-semibold tracking-wider text-right"
+            >
+              Date
+            </dt>
+            <dd class="col-start-1 row-start-2 text-right">{{ date }}</dd>
+            <div class="w-px bg-white row-span-full col-start-2" />
+            <dt
+              class="col-start-3 row-start-1 text-2xl font-semibold tracking-wider text-center"
+            >
+              Results
+            </dt>
+
+            <dd class="col-start-3 row-start-2 text-center">
+              {{ waterTestResult?.results }}
+            </dd>
+            <div class="w-px bg-white row-span-full col-start-4" />
+            <dt
+              class="col-start-5 row-start-1 text-2xl font-semibold tracking-wider text-left"
+            >
+              Conforms?
+            </dt>
+            <dd class="col-start-5 row-start-2 uppercase text-left">
+              {{ conforms }}
+            </dd>
+          </dl>
+
+          <p v-if="waterTestResult?.conforms">
+            This sample conforms to State Public Recreational Bathing Standards
+            for the below analyses.
+          </p>
+          <p v-else>
+            This sample does not conform to State Public Recreational Bathing
+            Standards for the below analyses.
+          </p>
+        </template>
+        <template v-else>
+          <p>No water test results posted, check back later!</p>
+        </template>
       </div>
     </Content>
     <Wave class="bg-cyan-900" />
     <Content class="pb-7">
+      <h1 class="mb-1 -mt-2">Details</h1>
       <dl>
         <div class="grid grid-cols-4 gap-y-4 md:gap-x-5 my-4">
           <dt
@@ -113,7 +153,7 @@
             Results in organisms per 100 ml
           </dd>
           <dd class="col-start-1 col-span-4 md:col-start-2 md:col-span-3">
-            Total coliform and <I>Pseudomonas aeruginosa </I> results shall be
+            Total coliform and <i>Pseudomonas aeruginosa </i> results shall be
             less than 1 organism per 100ml
           </dd>
           <dd class="col-start-1 col-span-4 md:col-start-2 md:col-span-3">
@@ -142,8 +182,29 @@
 </template>
 
 <script setup>
+import { computed } from "vue"
+import { format } from "date-fns"
 import Content from "~~/components/Content.vue"
 import Wave from "~~/components/Wave.vue"
+import { getLatestWaterTestResult } from "~~/lib/api"
+
+const preview = usePreview()
+
+const { data: waterTestResult } = await useAsyncData(
+  () => {
+    return getLatestWaterTestResult(preview.value)
+  },
+  { watch: [preview] }
+)
+
+const date = computed(() =>
+  waterTestResult.value?.resultsDate
+    ? format(new Date(waterTestResult.value.resultsDate), "MM/dd/yyyy")
+    : "Cannot Retrieve Date"
+)
+const conforms = computed(() =>
+  waterTestResult.value?.conforms ? "yes" : "no"
+)
 </script>
 
 <style scoped laang="scss">
@@ -154,18 +215,6 @@ import Wave from "~~/components/Wave.vue"
   background-size: cover;
   filter: grayscale(100%) contrast(200%);
 }
-
-/* dd {
-  grid-column-start: 2;
-}
-dl {
-  display: block;
-}
-dl {
-  display: grid;
-  grid-template-columns: 50% 50%;
-  gap: 10px;
-} */
 dt,
 dd {
   min-height: 32px;
