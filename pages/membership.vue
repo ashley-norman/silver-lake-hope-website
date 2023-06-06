@@ -43,10 +43,10 @@
           Without member involvement we cannot succeed. If you wish to offer any
           assistance at all, please send an email to
           <a
-            href="mailto:SLPOA@yahoo.com"
+            href="mailto:patton478@gmail.com"
             class="underline text-cyan-900 hover:no-underline"
           >
-            SLPOA@yahoo.com
+            patton478@gmail.com
           </a>
           and list some ways that you might offer to help our Association.
           Suggestions are also welcome.

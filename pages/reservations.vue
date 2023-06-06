@@ -19,14 +19,23 @@
     </div>
     <Content class="bg-cyan-900 text-white pt-7">
       <h1 class="mb-4 text-4xl">Calendar</h1>
-      <p>
+      <p class="mb-3">
         Below, view a read-only calendar with currently scheduled events. If you
         would like to schedule an event, or modify an existing event, please
-        send an email to
-        <a href="mailto:SLPOA@yahoo.com" class="underline hover:no-underline">
-          SLPOA@yahoo.com
-        </a>
+        fill out the reservation form and mail the form and payment to the
+        address listed. We look forward to hosting your event!
       </p>
+      <button
+        class="px-4 py-2 font-semibold text-sm bg-cyan-700 enabled:hover:bg-cyan-900 text-white rounded-full shadow-sm"
+      >
+        <a
+          :href="reservationPdf"
+          download="SLPOA Reservation Form"
+          target="_blank"
+        >
+          <fa-icon icon="fa-solid fa-download" /> Download
+        </a>
+      </button>
     </Content>
     <Wave class="bg-cyan-900" />
     <Content>
@@ -39,6 +48,8 @@
 import Content from "~~/components/Content.vue"
 import Wave from "~~/components/Wave.vue"
 import Calendar from "~~/components/Calendar.vue"
+
+import reservationPdf from "~~/assets/documents/reservationForm.pdf"
 </script>
 
 <style scoped>

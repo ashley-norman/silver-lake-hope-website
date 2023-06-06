@@ -80,7 +80,7 @@
             Site location
           </dt>
           <dd class="col-start-1 col-span-4 md:col-start-2 md:col-span-3">
-            11 Lakeview Ave, Blairstown NJ 07825
+            13 Lake View Ave, Blairstown NJ 07825
           </dd>
         </div>
         <div class="grid grid-cols-4 gap-x-5 my-4">

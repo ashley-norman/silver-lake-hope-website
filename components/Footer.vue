@@ -6,7 +6,7 @@
       <p>
         Have a question, comment, suggestion, or just want to say hi?
         <a
-          href="mailto:SLPOA@yahoo.com"
+          href="patton478@gmail.com"
           class="underline hover:no-underline text-cyan-900"
         >
           Send us an email!
@@ -28,7 +28,7 @@
           </dd>
           <dt class="uppercase mt-3">Email</dt>
           <dd class="hover:underline">
-            <a href="mailto:SLPOA@yahoo.com">SLPOA@yahoo.com</a>
+            <a href="mailto:patton478@gmail.com">patton478@gmail.comz</a>
           </dd>
           <dt class="uppercase mt-3">Address</dt>
           <a
@@ -36,7 +36,7 @@
             href="https://goo.gl/maps/NvPALEo6hE6BnGUe6"
             target="_blank"
           >
-            <dd>11 Lake View Ave</dd>
+            <dd>13 Lake View Ave</dd>
             <dd>Blairstown, NJ</dd>
           </a>
         </dl>
@@ -62,7 +62,7 @@
     </div>
   </footer>
   <div class="text-xs mx-auto">
-    © Silver Lake Property Owner's Association, 2022 | Website design and
+    © Silver Lake Property Owner's Association, 2022-2023 | Website design and
     development by
     <a
       href="mailto:ashley.ansell@gmail.com"
