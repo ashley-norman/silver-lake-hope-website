@@ -62,13 +62,28 @@
     <Content>
       <h2 class="mb-0">Membership Payment</h2>
       <h3 class="text-xl mb-5">
-        Use the below QR code to access the membership payment site.
+        Use the below QR code or button to access the membership payment site.
       </h3>
-      <div class="flex align-middle justify-center">
-        <img
-          src="~~/assets/images/qrcode.png"
-          alt="QR Code to the payment website"
-        />
+      <div class="flex flex-col" style="gap: 10px">
+        <div class="flex align-middle justify-center">
+          <img
+            src="~~/assets/images/qrcode.png"
+            alt="QR Code to the payment website"
+          />
+        </div>
+
+        <div class="flex align-middle justify-center pt-2">
+          <button
+            class="px-4 py-2 font-semibold text-sm bg-cyan-700 enabled:hover:bg-cyan-900 text-white rounded-full shadow-sm"
+          >
+            <a
+              href="https://link.clover.com/urlshortener/NzyVX5"
+              target="_blank"
+            >
+              <fa-icon icon="fa-solid fa-cart-shopping" /> Pay Now
+            </a>
+          </button>
+        </div>
       </div>
     </Content>
   </article>
