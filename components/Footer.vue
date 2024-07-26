@@ -28,7 +28,7 @@
           </dd>
           <dt class="uppercase mt-3">Email</dt>
           <dd class="hover:underline">
-            <a href="mailto:patton478@gmail.com">patton478@gmail.comz</a>
+            <a href="mailto:patton478@gmail.com">patton478@gmail.com</a>
           </dd>
           <dt class="uppercase mt-3">Address</dt>
           <a
